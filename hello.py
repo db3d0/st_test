@@ -1,7 +1,11 @@
 import streamlit as st
+import streamlit as st
+import pandas as pd
+import altair as alt
+import plotly.express as px
+
 st.write('Hello world')
 st.write('Hello space!')
-st.slider()
 
 df_reshaped = pd.read_csv('data/us-population-2010-2019-reshaped.csv')
 
