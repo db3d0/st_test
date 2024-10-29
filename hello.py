@@ -1,12 +1,17 @@
 import streamlit as st
-import streamlit as st
 import pandas as pd
 import altair as alt
+import plotly.express as px
 
-st.write('Hello world')
-st.write('Hello space!')
+st.set_page_config(
+    page_title="US energy TITLE Dashboard",
+    page_icon="🏂",
+    layout="wide",
+    initial_sidebar_state="expanded")
 
-df_reshaped = pd.read_csv('us-population-2010-2019-reshaped.csv')
+alt.themes.enable("dark")
+
+df_reshaped = pd.read_csv('data/us-population-2010-2019-reshaped.csv')
 
 with st.sidebar:
     st.title('🏂 US energy usage Dashboard title')
