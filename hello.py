@@ -6,7 +6,7 @@ import altair as alt
 st.write('Hello world')
 st.write('Hello space!')
 
-df_reshaped = pd.read_csv('data/us-population-2010-2019-reshaped.csv')
+df_reshaped = pd.read_csv('us-population-2010-2019-reshaped.csv')
 
 with st.sidebar:
     st.title('🏂 US energy usage Dashboard title')
