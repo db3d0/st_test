@@ -2,8 +2,8 @@ import sqlite3
 import streamlit as st
 
 # Admin credentials
-admin_username = "admin"
-admin_password = "password"
+admin_username = "admin957316&7k/."
+admin_password = "5tgdcjyu.w4&GF%$"
 
 # Initialize session state variables
 if 'login_status' not in st.session_state:
