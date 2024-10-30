@@ -151,7 +151,7 @@ with tab1:
             paragraphs = query_paragraphs(conn, st.session_state.selected_criteria, st.session_state.selected_method, selected_direction)
             
             if paragraphs:
-                st.markdown(f"<p><b>An increase (or presence) of {st.session_state.selected_criteria} leads to <i>{'higher' if selected_direction == 'Increase' else 'lower'}</i> {st.session_state.selected_method}.</b></p>", unsafe_allow_html=True)
+                st.markdown(f"<p><b>An increase (or presence) in {st.session_state.selected_criteria} leads to <i>{'higher' if selected_direction == 'Increase' else 'lower'}</i> {st.session_state.selected_method}.</b></p>", unsafe_allow_html=True)
                 for para_id, para_text in paragraphs:
                     if st.session_state.logged_in:
                         new_text = st.text_area(f"Edit text for record {para_id}", value=para_text, key=f"edit_{para_id}")
@@ -180,7 +180,7 @@ with tab1:
                     else:
                         st.write(para_text)
             else:
-                st.warning(f"No references have been reported for an increase (or presence) of {st.session_state.selected_criteria} leading to {'higher' if selected_direction == 'Increase' else 'lower'} {st.session_state.selected_method}.")
+                st.warning(f"No references have been reported for an increase (or presence) in {st.session_state.selected_criteria} leading to {'higher' if selected_direction == 'Increase' else 'lower'} {st.session_state.selected_method}.")
 
             # Add a new record if logged in
             if st.session_state.logged_in and st.button("Add New Record", key="add_new_record"):
